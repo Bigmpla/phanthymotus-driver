@@ -30,3 +30,9 @@ plugins:
     output_dir: /opt/phanthy-motus/data/vision_capture
     fps: 15
     max_duration_s: 30
+  qr_scan:
+    enabled: true
+    scan_hz: 2
+    stale_after_s: 3
+    # Same content emits again only after not being observed for this interval.
+    rearm_after_s: 3

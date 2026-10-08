@@ -68,6 +68,7 @@ COPY resource/ /work/resource/
 COPY common/ /work/common/
 COPY main.py   /work/main.py
 COPY device.py /work/device.py
+COPY qr_scan.py /work/qr_scan.py
 COPY config.yaml /work/config.yaml
 COPY deploy/     /deploy/
 

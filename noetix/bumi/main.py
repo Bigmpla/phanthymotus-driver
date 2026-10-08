@@ -161,6 +161,12 @@ class BumiDeviceBundle:
                 plugins_cfg["vision_capture"], camera_plugin))
             print("[bundle] VisionCapturePlugin loaded")
 
+        if plugins_cfg.get("qr_scan", {}).get("enabled", False):
+            from qr_scan import QrScanPlugin
+            self._plugins.append(QrScanPlugin(
+                plugins_cfg["qr_scan"], namespace, executor, camera_plugin))
+            print("[bundle] QrScanPlugin loaded")
+
     def start_all(self) -> None:
         for i, p in enumerate(self._plugins):
             try:
